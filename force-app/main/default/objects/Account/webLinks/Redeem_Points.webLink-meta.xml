@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Redeem_Points</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Redeem Points</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+var Lp = new sforce.SObject(&quot;Account&quot;);
+if(Lp.{!Account.Loyality_Points__c} &gt;= &apos;1000&apos;)
+{
+alert(&apos;Error : This Buyers Order has already been placed within a 48 Hour Hold and cannot be placed within one again.&apos;);
+}
+else{
+alert(&apos;Error :&apos;);
+}</url>
+</WebLink>

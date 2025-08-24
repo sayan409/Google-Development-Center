@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Add Row Example">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Field 1" value={field1} onchange={handleField1Change}></lightning-input>
+            <lightning-input label="Field 2" value={field2} onchange={handleField2Change}></lightning-input>
+            <lightning-button label="Add Row" onclick={addRow}></lightning-button>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <template for:each={rows} for:item="row">
+                <div key={row.id} class="slds-box slds-m-around_small">
+                    <lightning-input label="Field 1" value={row.field1} data-id={row.id} data-field="field1" onchange={handleFieldChange}></lightning-input>
+                    <lightning-input label="Field 2" value={row.field2} data-id={row.id} data-field="field2" onchange={handleFieldChange}></lightning-input>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

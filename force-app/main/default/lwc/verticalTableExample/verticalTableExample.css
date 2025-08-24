@@ -1,0 +1,25 @@
+.custom-table {
+        width: 100%;
+    }
+
+    .table-row {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-row {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table-cell {
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .header-cell {
+        padding: 10px;
+        flex-basis: 50%; /* Set the width for each header cell */
+    }

@@ -1,0 +1,34 @@
+/* Add this CSS to your component's style file or in a separate CSS file */
+
+.slds-card {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slds-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.slds-input,
+.slds-button {
+    margin-bottom: 1rem;
+}
+
+.slds-input,
+.slds-button,
+.slds-textarea {
+    width: 100%;
+}
+
+.slds-m-top_medium {
+    margin-top: 1rem;
+}
+
+.slds-text-color_error {
+    color: red;
+}
+
+/* Add more styling as needed */

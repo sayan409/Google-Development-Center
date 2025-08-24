@@ -1,0 +1,60 @@
+<template>
+	<lightning-card variant="Narrow" title="Multiple File Uploader" icon-name="standard:file">
+       <div class="cardBackgroundColor slds-p-left_medium slds-p-right_medium"> 
+		<div class="slds-align_absolute-center">
+			<img src={AsnbContactUsLogo}/>
+        </div>
+        <span class="slds-align_absolute-center">Please fill this form with your complete information</span>
+        
+			<div class="slds-grid">
+				<div class="slds-col">
+					<lightning-input type="text" variant="standard" name="Name" label="Name:"
+						placeholder="Enter Name..."></lightning-input>
+					<lightning-input type="number" variant="standard" name="IC Number" label="IC Number:"
+						placeholder="Enter IC Number..."></lightning-input>
+				</div>
+                &nbsp;&nbsp;
+				<div class="slds-col">
+					<lightning-input type="phone" variant="standard" name="Phone" label="Phone:"
+						placeholder="Enter Phone..."></lightning-input>
+					<lightning-input type="email" variant="standard" name="Email" label="Email:"
+						placeholder="Enter Email..."></lightning-input>
+				</div>
+			</div>
+            <lightning-input type="text" variant="standard" name="Subject" label="Subject:"
+					placeholder="Enter Subject..."></lightning-input>
+				<lightning-textarea type="text" variant="standard" name="Description" label="Description:"
+					placeholder="Enter Description..."></lightning-textarea>
+			<div class="">
+				<lightning-file-upload label="Attach Files" name="fileUploader" accept={acceptedFormats} multiple
+					onuploadfinished={handleUploadFinished}>
+				</lightning-file-upload>
+			</div>
+            <br>
+            <span class="">
+			<lightning-input type="checkbox" data-id="checkbox" label="" ></lightning-input>
+			
+			    <p style="" class="">By providing your personal data (including but not limited to your name, phone number, email address, MyKad number and account information), you have given your consent for ASNB to collect, use and disclose your personal data in accordance with the ASNB Privacy Policy available in&nbsp;<a href="https://www.asnb.com.my" target="_blank">ASNB's website</a>. I declare that I have read and agreed to the terms of&nbsp;<a href="https://cdn.myasnb.com.my/notice/PrivacyPolicy.html" target="_blank">Privacy notice</a>,<a href="https://www.asnb.com.my/asnbv2_7disclaimer_EN.php" target="_blank">Terms and Conditions</a>.</p>
+			    <p style="margin-top: 30px; margin-bottom: 5px">You will receive a confirmation email from us with your case number.</p>
+			</span>
+
+            <br>
+            <span class="slds-align_absolute-center">Please tick the box to continue:</span>
+            <br>
+			<!-- <div class="slds-align_absolute-center">
+				<div class="g-recaptcha" data-sitekey="{!$Label.Data_Site_Key}" data-callback="onSubmit"
+					style="margin-bottom: 10px; margin-top: 10px;"></div>
+			</div> -->
+
+			<div class="slds-align_absolute-center">
+                <iframe>
+				    <div id="recaptchaContainer" class="g-recaptcha" data-sitekey={dataSiteKey} data-theme="dark"></div>
+                </iframe>
+                <lightning-button class="slds-float_right" label="Submit" onclick={submitForm} disabled={isButtonDisabled}></lightning-button>
+            </div>
+
+            
+            
+       </div>
+	</lightning-card>
+</template>

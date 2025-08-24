@@ -1,0 +1,97 @@
+<template>
+
+	<lightning-card title="Project: Mars Rover's Eye" icon-name="standard:bot">
+		<div class="slds-p-around_medium">
+			<lightning-input type="number" variant="standard" name="sol" label="Enter SOL (Martian Day)"
+				placeholder="Enter sol..." onchange={handleSolChanges} required></lightning-input>
+			<lightning-combobox label="Select Rover Camera" name="Camera" placeholder="Select Viewfinder ▼"
+				options={cameraOptions} onchange={handleCamChanges} required></lightning-combobox><br>
+			<div class="slds-clearfix">
+				<div class="slds-float_right">
+					<lightning-button variant="brand" label="Submit" type="submit" onclick={handleInput}>
+					</lightning-button>
+				</div>
+			</div>
+		</div>
+
+
+
+		<template if:true={isTableData}>
+			<template if:true={isLoading}>
+				<lightning-spinner alternative-text="Loading" size="medium" variant="Brand"></lightning-spinner>
+			</template>
+
+
+			<lightning-layout multiple-rows>
+				<lightning-layout-item size="6" padding="around-small"></lightning-layout-item>
+				<lightning-layout-item size="6" padding="around-small">
+					<lightning-input type="search" label="Search Rovers" onchange={handleSearch}></lightning-input>
+				</lightning-layout-item>
+			</lightning-layout>
+
+			<div class="slds-p_around-medium slds-box slds-box_xx-small ">
+
+				<div class="slds-scrollable_y" style="height:15rem">
+
+					<table aria-multiselectable="true" role="grid"
+						class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered ">
+						<thead>
+							<tr class="slds-line-height_reset ">
+
+								<template for:each={Column} for:item="col">
+									<th class="" key={col.label}>
+										<div class="slds-truncate" title={col.label}>{col.label}</div>
+									</th>
+								</template>
+							</tr>
+						</thead>
+
+						<tbody>
+							<template for:each={data} for:item="marsDetails">
+
+								<tr class="slds-hint-parent" key={marsDetails.id}>
+									<td data-label="Id">
+										<div class="slds-truncate" title="Id">{marsDetails.id}</div>
+									</td>
+									<td data-label="Camera Name">
+										<div class="slds-truncate" title="Camera Name">{marsDetails.camera.full_name}
+										</div>
+									</td>
+									<td data-label="Earth Date">
+										<div class="slds-truncate" data-id="trxstatus" title="Earth Date">
+											{marsDetails.earth_date}</div>
+									</td>
+									<td data-label="Rover Name">
+										<div class="slds-truncate" title="Rover Name">{marsDetails.rover.name}</div>
+									</td>
+									<td data-label="Rover Landing Date">
+										<div class="slds-truncate" title="Rover Landing Date">
+											{marsDetails.rover.landing_date}</div>
+									</td>
+									<td data-label="Rover Launch Date">
+										<div class="slds-truncate" title="Rover Launch Date">
+											{marsDetails.rover.launch_date}
+										</div>
+									</td>
+									<td data-label="Rover Status">
+										<div class="slds-truncate" title="Rover Status">{marsDetails.rover.status}
+										</div>
+									</td>
+									<td data-label="Image URL" class="slds-cell-wrap">
+										<a href="#" onclick={selectedImageURL}
+											data-url={marsDetails.img_src}>{marsDetails.img_src}</a>
+									</td>
+
+								</tr>
+							</template>
+						</tbody>
+
+					</table>
+				</div>
+
+
+			</div>
+		</template>
+	</lightning-card>
+
+</template>

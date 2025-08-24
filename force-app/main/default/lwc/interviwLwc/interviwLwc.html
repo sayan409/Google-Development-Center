@@ -1,0 +1,21 @@
+<template>
+ <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+    
+			<template if:true={isLoading}>
+				<lightning-spinner alternative-text="Loading" size="medium" variant="Brand"></lightning-spinner>
+			</template>
+   
+
+<lightning-datatable
+    key-field="Id"
+    data={AccData}
+    show-row-number-column
+    hide-checkbox-column
+    columns={columnsList}
+    onrowaction={handleRowAction}>
+</lightning-datatable>
+
+    
+
+ </lightning-card>
+</template>

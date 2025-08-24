@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="New Lead: General" icon-name="standard:lead">
+        <lightning-record-edit-form 
+            object-api-name="Lead"
+            onsuccess={successHandler}
+            onsubmit={submitHandler}
+            onerror={handleError}
+            record-type-id="0129D000001J7VSQA0"
+    >
+    <div class="slds-m-around_xxx-large slds-p-around_xx-large">
+        <div class="slds-grid slds-gutters ">
+                <div class="slds-col ">
+                    <lightning-input-field field-name="Title__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Full_Name__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="MC_ID__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Customertype__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Phone_Country__c"></lightning-input-field>
+                    <lightning-input-field field-name="Phone"></lightning-input-field>
+                    <lightning-input-field field-name="Email" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Gender__c"></lightning-input-field>
+                    <lightning-input-field field-name="Countryofbirth__c"></lightning-input-field>
+                    <lightning-input-field field-name="Birthdate__c"></lightning-input-field>
+                    <lightning-input-field field-name="Language__c"></lightning-input-field>
+                    <lightning-input-field field-name="Maritalstatus__c"></lightning-input-field>
+                    <lightning-input-field field-name="Nationality__c"></lightning-input-field>
+                    <lightning-input-field field-name="Race__c"></lightning-input-field>
+                    <lightning-input-field field-name="Pep_Flag__c"></lightning-input-field>
+                    <lightning-input-field field-name="Channel__c"></lightning-input-field>
+                </div>
+                <div class="slds-col">
+                    <lightning-input-field field-name="Status"></lightning-input-field>
+                    <lightning-input-field field-name="Numberofdependents__c"></lightning-input-field>
+                    <lightning-input-field field-name="Mothermaidenname__c"></lightning-input-field>
+                    <lightning-input-field field-name="Full_Phone_No__c"></lightning-input-field>
+                    <lightning-input-field field-name="Mobile_Country_Code__c"></lightning-input-field>
+                    <lightning-input-field field-name="MobilePhone"></lightning-input-field>
+                    <lightning-input-field field-name="Occupationtype__c"></lightning-input-field>
+                    <lightning-input-field field-name="Employername__c"></lightning-input-field>
+                    <lightning-input-field field-name="Annual_Income__c"></lightning-input-field>
+                    <lightning-input-field field-name="Natureofbusiness__c"></lightning-input-field>
+                    <lightning-input-field field-name="Communication_Method__c"></lightning-input-field>
+                    <lightning-input-field field-name="Investmentobjectives__c"></lightning-input-field>
+                    <lightning-input-field field-name="Sourceoffund__c"></lightning-input-field>
+                    <lightning-input-field field-name="Source_of_Fund_As_At__c"></lightning-input-field>
+                    <lightning-input-field field-name="LastName"  class="slds-hide" value=" "></lightning-input-field>
+                </div> 
+            </div>
+            <div class="slds-m-top_medium slds-grid slds-grid_align-center slds-align–absolute-center ">
+                <lightning-button variant="outline-brand" type="cancel" name="cancel" label="Cancel" onclick={handleCancel}></lightning-button>
+                &nbsp;&nbsp;
+                <lightning-button variant="brand" type="submit" name="save" label="Save"></lightning-button>
+            </div>
+        </div>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>

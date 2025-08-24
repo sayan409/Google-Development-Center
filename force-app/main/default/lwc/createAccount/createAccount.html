@@ -1,0 +1,75 @@
+<template>
+    <lightning-card title="New Account: Person Account" icon-name="standard:account">
+        <lightning-record-edit-form
+            object-api-name="Account"
+            onsubmit={handleSubmit}
+            onsuccess={successHandler}
+            onerror={handleError}
+            record-type-id="0129D000001JBLcQAO"
+        >   
+        <div class="slds-m-around_xxx-large slds-p-around_xx-large">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col ">
+                    <lightning-input-field field-name="Title__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Full_Name__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Master_Customer_ID__c"></lightning-input-field>
+                    <lightning-input-field field-name="Customertype__c"></lightning-input-field>
+                    <lightning-input-field field-name="Phone_Country_Code__c"></lightning-input-field>
+                    <lightning-input-field field-name="Phone" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Secondary_Phone_Country_Code__c"></lightning-input-field>
+                    <lightning-input-field field-name="Secondary_Phone_No__c"></lightning-input-field>
+                    <lightning-input-field field-name="PersonEmail"></lightning-input-field>
+                    <lightning-input-field field-name="Gender__c"></lightning-input-field>
+                    <lightning-input-field field-name="Birthdate__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Language__c"></lightning-input-field>
+                    <lightning-input-field field-name="Marital_Status__c"></lightning-input-field>
+                    <lightning-input-field field-name="Nationality__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Race__c"></lightning-input-field>
+                    <lightning-input-field field-name="Has_crs__c"></lightning-input-field>
+                    <lightning-input-field field-name="Birth_Country__c"></lightning-input-field>
+                    <lightning-input-field field-name="Religion__c"></lightning-input-field>
+                    <lightning-input-field field-name="Education__c"></lightning-input-field>
+                    <lightning-input-field field-name="Full_phone_no__c"></lightning-input-field>
+                    <lightning-input-field field-name="Mobile_Country_Code__c"></lightning-input-field>
+                    <lightning-input-field field-name="Mobile_Number__c"></lightning-input-field>
+                    <lightning-input-field field-name="Occupation_Type__c"></lightning-input-field>
+                    <lightning-input-field field-name="OtherOccupation__c"></lightning-input-field>
+                    <lightning-input-field field-name="Employer_Name__c"></lightning-input-field>
+                    <lightning-input-field field-name="Annual_Income__c"></lightning-input-field>
+                </div>
+                <div class="slds-col">
+                    <lightning-input-field field-name="Status__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Number_Of_Dependents__c"></lightning-input-field>
+                    <lightning-input-field field-name="Mother_Maiden_Name__c"></lightning-input-field>
+                    <lightning-input-field field-name="Nature_Of_Business__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Mention_Other_Nature_Of_Business__c"></lightning-input-field>
+                    <lightning-input-field field-name="Communication_Mode__c"></lightning-input-field>
+                    <lightning-input-field field-name="Purpose_Of_Investment__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Source_Of_Fund__c"></lightning-input-field>
+                    <lightning-input-field field-name="Source_Of_Fund_As_At__c"></lightning-input-field>
+                    <lightning-input-field field-name="Risk_Profile_Score__c"></lightning-input-field>
+                    <lightning-input-field field-name="Risk_Profile__c"></lightning-input-field>
+                    <lightning-input-field field-name="Pep_Flag__c"></lightning-input-field>
+                    <lightning-input-field field-name="Aml_Pep__c"></lightning-input-field>
+                    <lightning-input-field field-name="Aml_Rca__c"></lightning-input-field>
+                    <lightning-input-field field-name="AML_Last_Update_Date__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="Remark__c"></lightning-input-field>
+                    <lightning-input-field field-name="Number_Of_Dependents__c"></lightning-input-field>
+                    <lightning-input-field field-name="Isaf_Assessment_Date__c"></lightning-input-field>
+                    <lightning-input-field field-name="Isaf_Score__c"></lightning-input-field>
+                    <lightning-input-field field-name="Accepted_High_Risk__c"></lightning-input-field>
+                    <lightning-input-field field-name="Source_Channel_code__c" required="true"></lightning-input-field>
+                    <lightning-input-field field-name="KWSP_Membership_No__c"></lightning-input-field>
+                    <lightning-input-field field-name="EPF_I_Status__c"></lightning-input-field>
+                    <lightning-input-field field-name="LastName" class="slds-hide"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-m-top_medium slds-grid slds-grid_align-center slds-align–absolute-center ">
+                <lightning-button variant="outline-brand" type="cancel" name="cancel" label="Cancel" onclick={handleCancel}></lightning-button>
+                &nbsp;&nbsp;
+                <lightning-button variant="brand" type="submit" name="save" label="Save"></lightning-button>
+            </div>
+        </div>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>

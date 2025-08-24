@@ -1,0 +1,30 @@
+<template>
+   <lightning-card title="Account Details" icon-name="standard:person_account">
+        <div class="slds-m-around_small">
+            <!-- Replace the record ID with your own -->
+    <lightning-record-view-form
+        record-id={recordId}
+        object-api-name="Account"
+>
+    <div class="slds-grid slds-box slds-theme_alert-texture">
+        <div class="slds-col">
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="AccountNumber"></lightning-output-field>
+        </div>
+            <div class="slds-col">
+            <lightning-output-field field-name="Status__c"></lightning-output-field>
+            <lightning-output-field field-name="Phone"></lightning-output-field>
+        </div>
+        <div class="slds-col">
+            <lightning-output-field field-name="Type"></lightning-output-field>
+            <lightning-output-field field-name="Rating"></lightning-output-field>
+        </div>
+        
+    </div>
+    </lightning-record-view-form><br>
+    <lightning-button variant="brand" label="Refresh" title="Refresh action with brand variant" icon-name="action:refresh" class="slds-m-left_xx-small slds-align_absolute-center" onclick={handleClick}></lightning-button>
+        </div><br>
+        
+
+   </lightning-card> 
+</template>

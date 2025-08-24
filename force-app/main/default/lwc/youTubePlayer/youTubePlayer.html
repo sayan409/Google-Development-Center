@@ -1,0 +1,90 @@
+<!--slds ignore validator-->
+<template>
+	<lightning-card variant="Narrow" title="Youtube Player" icon-name="standard:account">
+		<div class="slds-m-around_large">
+			<lightning-input type="search" variant="standard" name="Search" label="Search" placeholder="search here...">
+			</lightning-input><br>
+			<iframe 
+				width="560" 
+				height="315" 
+				src={finalLink}
+				allowfullscreen>
+			</iframe><br>
+			<iframe 
+				width="400" 
+				height="200" 
+				src={playlists.id}
+				allowfullscreen>
+			</iframe>
+			
+			<iframe 
+			width="400" 
+			height="200" 
+			src={activities}
+			allowfullscreen>
+
+		</iframe>
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+			<thead>
+				<tr class="slds-line-height_reset">
+					<template for:each={Columns} for:item="col">
+						<th class="" key={col.label}>
+							<div class="slds-truncate" title={col.label}>{col.label}</div>
+						</th>
+					</template>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<template for:each={playlists} for:item="playlists">
+					<tr key={playlists.items} class="slds-hint-parent">
+						<td data-label="Kind">
+							<div class="slds-truncate" title="Id">{playlists.kind}</div>
+						</td>
+						<td data-label="Id">
+							<div class="slds-truncate" title="Id">{playlists.id}</div>
+						</td>
+						<td data-label="E-Tag">
+							<div class="slds-truncate" title="Id">{playlists.etag}</div>
+						</td>
+						<!-- <td scope="row"> Cloudhub </td>
+									<td scope="row"> 4/14/2015 </td>
+									<td scope="row"> Prospecting </td>
+									<td scope="row"> 20% </td>
+									<td scope="row"> k </td>
+									<td scope="row"> test@cloudhub.com </td> -->
+					</tr>
+				</template>
+			</tbody>
+		</table>
+		</div>
+		<div class="slds-m-around_large slds-align_absolute-center">
+			<div class="slds-grid slds-gutters">
+				<div class="slds-col">
+					<lightning-button variant="brand" icon-name="utility:jump_to_left" label="Prev" title="Previous"
+						onclick={handlePrevious}></lightning-button>&nbsp;&nbsp;
+				
+					<lightning-button variant="brand" icon-name="utility:play" label="Play" title="Play"
+						onclick={handlePlay}></lightning-button>&nbsp;&nbsp;
+				
+					<lightning-button variant="brand" icon-name="utility:pause" label="Pause" title="Pause"
+						onclick={handlePause}></lightning-button>&nbsp;&nbsp;
+				
+					<lightning-button variant="brand" icon-name="utility:jump_to_right" label="Next" title="Next"
+						onclick={handleNext}></lightning-button>
+				</div>
+				<div class="slds-col">
+					<lightning-button variant="brand" icon-name="standard :screen" label="Playlist" title="Playlist"
+						onclick={fetchPlaylists}></lightning-button>&nbsp;&nbsp;
+				
+					<lightning-button variant="brand" icon-name="standard:guidance_center" label="Activities" title="Activities"
+						onclick={fetchActivities}></lightning-button>&nbsp;&nbsp;
+				</div>
+				
+			</div>
+		</div>
+		<p slot="footer">Card Footer</p>
+	</lightning-card>
+
+
+</template>

@@ -1,0 +1,5 @@
+:host{
+    --slds-c-card-color-background: transparent;
+    --slds-c-card-color-border: Black;
+    --slds-c-card-footer-color-border:  rgb(0, 0, 255);
+}

@@ -1,0 +1,39 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <template for:each={colomn} for:item="col">
+                    <th class="" key={col.label}>
+                        <div class="slds-truncate" title={col.label}>{col.label}</div>
+                    </th>
+                </template>
+            </tr>
+            </thead>
+            <tbody>
+                <template for:each={singleData} for:item="acc">
+                    <tr class="slds-hint-parent" key={acc.Id}>
+
+                        <td data-label="Name">
+                            <a href="#" data-id={acc.Id} onclick={selectedAccount}>{acc.name}</a>
+                        </td>
+                        <td data-label="Age">
+                            <div class="slds-truncate" title="Age">{acc.age}
+                            </div>
+                        </td>
+                        <td data-label="Technical">
+                            <div class="slds-truncate" title="Technical">
+                                {acc.technical}</div>
+                        </td>
+                        <td data-label="Weight">
+                            <div class="slds-truncate" title="Weight">
+                                {acc.weight}</div>
+                        </td>
+                        <td data-label="Hobby">
+                            <div class="slds-truncate" title="Hobby">
+                                {acc.hobby}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+    </table>
+</template>

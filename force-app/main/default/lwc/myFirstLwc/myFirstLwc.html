@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="This is Header" >
+        <div class="slds-p-around_large">
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </template>
+            <p>Hello {name}</p>
+            <br>
+            <lightning-button variant="brand" label="Change" onclick={handleChange}></lightning-button>
+        </div>
+        <div slot="footer">
+            <p>This is footer</p>
+        </div>
+    </lightning-card>
+</template>

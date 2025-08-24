@@ -1,0 +1,98 @@
+<template>
+	<lightning-card variant="Narrow" hide-header>
+		<div class="container">
+			<div class="header">
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="4" small-device-size="3" medium-device-size="6"
+						class="slds-table slds-table_striped" large-device-size="5">
+						<h2>Delivery Date</h2>
+						<p class="slds-text-heading_medium"><strong>Today</strong></p>
+						<p>Estimated between</p>
+						<p>12:00 PM - 2:00 PM</p>
+					</lightning-layout-item>
+					<lightning-layout-item size="8" small-device-size="3" medium-device-size="6"
+						class="slds-table slds-table_striped" large-device-size="7">
+						<p class="status">Delivery Status: </p>
+						<p class="slds-text-heading_medium"><strong>Out for Delivery</strong> ➡️</p>
+					</lightning-layout-item>
+				</lightning-layout>
+			</div>
+
+			<div class="section">
+				<h3 class="slds-text-heading_medium">🛩️ Shipment Overview</h3>
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="6" small-device-size="3" medium-device-size="6" large-device-size="6">
+						<div class="slds-var-p-left_x-large">
+							<p class="label stripped">TRACKING NUMBER</p>
+							<p class="label">DELIVERED TO</p>
+							<p class="label stripped">STANDARD TRANSIT</p>
+							<p class="label">DELIVERY DATE</p>
+							<p class="label stripped">DELIVERY DATE</p>
+							<p class="label">DELIVERY DATE</p>
+							<p class="label stripped">DELIVERY DATE</p>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="6" small-device-size="3" medium-device-size="6" large-device-size="6">
+						<div class="slds-var-p-right_x-large">
+							<p class="value stripped">777571878040</p>
+							<p class="value">Shipping/Receiving</p>
+							<p class="value stripped">7/25/24 BEFORE 5:00 PM</p>
+							<p class="value">7/26/24 BEFORE 5:00 PM</p>
+							<p class="value stripped">7/26/24 BEFORE 5:00 PM</p>
+							<p class="value">7/26/24 BEFORE 5:00 PM</p>
+							<p class="value stripped">7/26/24 BEFORE 5:00 PM</p>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+
+				<div class="section">
+					<h3 class="slds-text-heading_medium">🚚 Services</h3>
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="6" small-device-size="3" medium-device-size="6"
+							large-device-size="6">
+							<div class="slds-var-p-left_x-large">
+								<p class="label stripped">SERVICE</p>
+								<p class="label">TERMS</p>
+								<p class="label stripped">SPECIAL HANDLING SECTION</p>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="6" small-device-size="3" medium-device-size="6"
+							large-device-size="6">
+							<div class="slds-var-p-right_x-large">
+								<p class="value stripped">FedEx Express Saver</p>
+								<p class="value">Third Party</p>
+								<p class="value stripped">Deliver Weekday</p>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</div>
+
+				<div class="section">
+					<h3 class="slds-text-heading_medium">📦 Package Details</h3>
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="6" small-device-size="3" class="slds-table_striped"
+							medium-device-size="6" large-device-size="6">
+							<div class="slds-var-p-left_x-large">
+								<p class="label stripped">WEIGHT</p>
+								<p class="label">DIMENSIONS</p>
+								<p class="label stripped">TOTAL PIECES</p>
+								<p class="label">TOTAL SHIPMENT WEIGHT</p>
+								<p class="label stripped">PACKAGING</p>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="6" small-device-size="3" medium-device-size="6"
+							large-device-size="6">
+							<div class="slds-var-p-right_x-large">
+								<p class="value stripped">7 lbs / 3.18 kgs</p>
+								<p class="value">30x24x6 in.</p>
+								<p class="value stripped">1</p>
+								<p class="value">7 lbs / 3.18 kgs</p>
+								<p class="value stripped">Your Packaging</p>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</div>
+			</div>
+		</div>
+	</lightning-card>
+</template>

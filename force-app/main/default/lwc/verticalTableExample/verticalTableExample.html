@@ -1,0 +1,16 @@
+<template>
+    <div class="custom-table">
+        <div class="table-row header-row">
+            <div class="table-cell header-cell">Header 1</div>
+            <div class="table-cell header-cell">Header 2</div>
+            <!-- Add more header cells as needed -->
+        </div>
+        <template for:each={data} for:item="row">
+            <div key={row.id} class="table-row">
+                <div class="table-cell">{row.column1}</div>
+                <div class="table-cell">{row.column2}</div>
+                <!-- Add more cells as needed -->
+            </div>
+        </template>
+    </div>
+</template>

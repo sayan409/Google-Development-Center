@@ -1,0 +1,67 @@
+<template>
+		<lightning-card  variant="Narrow"  title="All Leads" icon-name="standard:lead">
+
+
+
+
+				<template if:true={dataList}>
+						<div if:true={isLoading}>
+								<lightning-spinner alternative-text="Loading" size="small" variant="Brand"></lightning-spinner>
+						</div>
+
+						<div class="slds-box slds-box_xx-small">
+								<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+										<thead>
+												<tr class="slds-line-height_reset">
+														<template for:each={columnsList} for:item="col">
+																<th class="" key={col.label}>
+																		<div class="slds-truncate" title={col.label}>{col.label}</div>
+																</th>
+														</template>
+												</tr>
+										</thead>
+										<tbody>
+												<template for:each={dataList} for:item="lead">
+														<tr class="slds-hint-parent" key={lead.Id}>
+																<td data-label="Lead Id">
+																		<div class="slds-truncate" title="Id">{lead.Id}</div>
+																</td>
+																<td data-label="Name">
+																		<a href="#" data-id={lead.Id} onclick={selectedLead}>{lead.Name}</a>
+																</td>
+
+																<td data-label="Mobile">
+																		<div class="slds-truncate" title="MobilePhone">
+																				{lead.MobilePhone}</div>
+																</td>
+																<td data-label="Email">
+																		<div class="slds-truncate" title="Email">
+																				{lead.Email}</div>
+																</td>
+																<td data-label="Lead Status">
+																		<div class="slds-truncate" title="Status">
+																				{lead.Status}</div>
+																</td>
+														</tr>
+												</template>
+										</tbody>
+										<footer>
+											<p>This is the Table Footer</p>
+											
+										</footer>
+								</table>
+						</div>
+						<br />
+				</template>
+
+
+
+				<!-- 				<lightning-datatable
+										key-field="id"
+										data={dataList}
+										show-row-number-column
+										columns={columnsList}
+										>
+									</lightning-datatable> -->
+		</lightning-card>
+</template>

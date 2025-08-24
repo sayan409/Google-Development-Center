@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BUCKET_MEALS__c</fullName>
+    <label>BUCKET MEALS</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Friendship Bucket | Non veg Serves 3 | ₹699.00</fullName>
+                <default>false</default>
+                <label>Friendship Bucket | Non veg Serves 3 | ₹699.00</label>
+            </value>
+            <value>
+                <fullName>Bucket for Two | Non veg Serves 2 | ₹599.00</fullName>
+                <default>false</default>
+                <label>Bucket for Two | Non veg Serves 2 | ₹599.00</label>
+            </value>
+            <value>
+                <fullName>Ultimate Savings Bucket |  Non veg Serves 2-3 | ₹699.00</fullName>
+                <default>false</default>
+                <label>Ultimate Savings Bucket |  Non veg Serves 2-3 | ₹699.00</label>
+            </value>
+            <value>
+                <fullName>Big 12 |  Non veg Serves 2-3 | ₹729.00</fullName>
+                <default>false</default>
+                <label>Big 12 |  Non veg Serves 2-3 | ₹729.00</label>
+            </value>
+            <value>
+                <fullName>Mingles Bucket Meal |  Non veg Serves 2 | ₹459.00</fullName>
+                <default>false</default>
+                <label>Mingles Bucket Meal |  Non veg Serves 2 | ₹459.00</label>
+            </value>
+            <value>
+                <fullName>Big 8 |  Non veg Serves 2-3 | ₹619.00</fullName>
+                <default>false</default>
+                <label>Big 8 |  Non veg Serves 2-3 | ₹619.00</label>
+            </value>
+            <value>
+                <fullName>5pc Smoky Red Chicken |  Non veg Serves 2 | ₹429.00</fullName>
+                <default>false</default>
+                <label>5pc Smoky Red Chicken |  Non veg Serves 2 | ₹429.00</label>
+            </value>
+            <value>
+                <fullName>8 pc Hot &amp; Crispy Chicken |  Non veg Serves 3-4 | ₹699.00</fullName>
+                <default>false</default>
+                <label>8 pc Hot &amp; Crispy Chicken |  Non veg Serves 3-4 | ₹699.00</label>
+            </value>
+            <value>
+                <fullName>6 Pc Hot &amp; Crispy |  Non veg Serves 2-3 | ₹549.00</fullName>
+                <default>false</default>
+                <label>6 Pc Hot &amp; Crispy |  Non veg Serves 2-3 | ₹549.00</label>
+            </value>
+            <value>
+                <fullName>KFC Favorites | Non veg Serves 2 | ₹399.00</fullName>
+                <default>false</default>
+                <label>KFC Favorites | Non veg Serves 2 | ₹399.00</label>
+            </value>
+            <value>
+                <fullName>Chick &amp; Share |  Non veg Serves 2-3 | ₹449.00</fullName>
+                <default>false</default>
+                <label>Chick &amp; Share |  Non veg Serves 2-3 | ₹449.00</label>
+            </value>
+            <value>
+                <fullName>5pc Leg Piece Bucket &amp; 2 Dips |  Non veg Serves 2 | ₹449.00</fullName>
+                <default>false</default>
+                <label>5pc Leg Piece Bucket &amp; 2 Dips |  Non veg Serves 2 | ₹449.00</label>
+            </value>
+            <value>
+                <fullName>5pc Leg Piece Bucket Meal |  Non veg Serves 2 | ₹599.00</fullName>
+                <default>false</default>
+                <label>5pc Leg Piece Bucket Meal |  Non veg Serves 2 | ₹599.00</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

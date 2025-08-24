@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="SMS API Callout">
+        <div class="slds-p-around_large">
+            <lightning-input label="Username" value={un} onchange={handleInputChange} required></lightning-input>
+            <lightning-input label="Password" type="password" value={pwd} onchange={handleInputChange} required></lightning-input>
+            <lightning-input label="Destination Number" placeholder="Enter Destination Number" value={dstno} onchange={handleInputChange} required></lightning-input>
+            <lightning-input label="Message" value={msg} onchange={handleInputChange} required></lightning-input>
+            <lightning-input label="Type" type="number" value={type} onchange={handleInputChange} required></lightning-input>
+            <lightning-input label="Agreed Term" value={agreedterm} onchange={handleInputChange} required></lightning-input>
+            <lightning-input label="Send ID" type="number" value={sendid} onchange={handleInputChange} required></lightning-input>
+            <br><lightning-button label="Submit" variant="brand" onclick={handleSendSMS} required></lightning-button>
+
+        </div>
+        <div class="slds-p-around_medium">
+            <template if:true={responseMessage}>
+                <p>Response: {responseMessage}</p>
+            </template>
+            <template if:true={errorMessage}>
+                <p style="color: red;">Error: {errorMessage}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
