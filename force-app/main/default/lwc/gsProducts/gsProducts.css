@@ -1,0 +1,6 @@
+.slds-card {
+    height: 100%;
+}
+.slds-avatar img {
+    object-fit: cover;
+}

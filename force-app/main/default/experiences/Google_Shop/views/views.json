@@ -1,0 +1,56 @@
+{
+  "home": {
+    "label": "Home",
+    "regions": [
+      {
+        "type": "component",
+        "componentName": "c__gsAbout"
+      }
+    ]
+  },
+  "about": {
+    "label": "About Google Shop",
+    "regions": [
+      {
+        "type": "component",
+        "componentName": "c__gsAbout"
+      }
+    ]
+  },
+  "services": {
+    "label": "Services",
+    "regions": [
+      {
+        "type": "component",
+        "componentName": "c__gsServices"
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact Us",
+    "regions": [
+      {
+        "type": "component",
+        "componentName": "c__gsContactUs"
+      }
+    ]
+  },
+  "products": {
+    "label": "Products",
+    "regions": [
+      {
+        "type": "component",
+        "componentName": "c__gsProducts"
+      }
+    ]
+  },
+  "cart": {
+    "label": "Cart",
+    "regions": [
+      {
+        "type": "component",
+        "componentName": "c__gsCart"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+<template>
+    <section class="slds-p-around_large">
+        <div class="slds-text-heading_large slds-m-bottom_medium">Products</div>
+
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading products" size="medium"></lightning-spinner>
+        </template>
+
+        <template if:true={error}>
+            <c-error-panel message={error}></c-error-panel>
+        </template>
+
+        <template if:true={products}>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <template for:each={products} for:item="p">
+                    <div key={p.pricebookEntryId} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <article class="slds-card slds-m-bottom_medium">
+                            <div class="slds-card__header slds-grid slds-p-around_small">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__figure">
+                                        <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                                            <img if:true={p.imageUrl} src={p.imageUrl} alt={p.name}/>
+                                        </span>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-card__header-title slds-truncate" title={p.name}>
+                                            {p.name}
+                                        </h2>
+                                        <p class="slds-text-color_weak slds-truncate">{p.code}</p>
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="slds-card__body slds-p-around_small">
+                                <p class="slds-truncate" title={p.description}>{p.description}</p>
+                                <div class="slds-m-top_small slds-text-title_bold">
+                                    {p.displayPrice}
+                                </div>
+                                <div class="slds-m-top_small">
+                                    <lightning-input type="number" label="Qty" value="1" min="1" data-pbe={p.pricebookEntryId} onchange={handleQtyChange}></lightning-input>
+                                </div>
+                            </div>
+                            <div class="slds-card__footer slds-p-around_small">
+                                <lightning-button variant="brand" label="Add to Cart" data-pbe={p.pricebookEntryId} onclick={handleAddToCart}></lightning-button>
+                            </div>
+                        </article>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </section>
+</template>

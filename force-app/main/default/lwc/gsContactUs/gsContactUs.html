@@ -1,0 +1,26 @@
+<template>
+    <section class="slds-p-around_large">
+        <div class="slds-text-heading_large slds-m-bottom_small">Contact Us</div>
+        <p class="slds-text-body_regular slds-m-bottom_medium">
+            Have questions about products, pricing, or orders? Get in touch.
+        </p>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                <lightning-input type="text" label="Your Name" value={name} onchange={handleChange} data-field="name"></lightning-input>
+                <lightning-input class="slds-m-top_small" type="email" label="Email" value={email} onchange={handleChange} data-field="email"></lightning-input>
+                <lightning-textarea class="slds-m-top_small" label="Message" value={message} onchange={handleChange} data-field="message"></lightning-textarea>
+                <lightning-button class="slds-m-top_medium" variant="brand" label="Send Message" onclick={handleSend}></lightning-button>
+                <template if:true={sent}>
+                    <div class="slds-text-color_success slds-m-top_small">Thanks! We received your message.</div>
+                </template>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                <div class="slds-box slds-theme_default">
+                    <p class="slds-text-title_bold">Support</p>
+                    <p>Email: support@googleshop.example</p>
+                    <p>Hours: Mon–Fri, 9am–5pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

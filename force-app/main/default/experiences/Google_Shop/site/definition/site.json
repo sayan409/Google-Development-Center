@@ -1,0 +1,11 @@
+{
+    "template": "LWR",
+    "label": "Google Shop",
+    "site": {
+        "masterLabel": "Google Shop",
+        "description": "Google Shop Experience (LWR) Site",
+        "subdomain": "",
+        "urlPathPrefix": "google-shop",
+        "isActive": true
+    }
+}

@@ -1,0 +1,60 @@
+<template>
+    <section class="slds-p-around_large">
+        <div class="slds-text-heading_large slds-m-bottom_medium">Cart</div>
+
+        <template if:true={toast.message}>
+            <div class={toastClass} role="status">{toast.message}</div>
+        </template>
+
+        <template if:true={items.length}>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th scope="col"><div class="slds-truncate" title="Product">Product</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Unit Price">Unit Price</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Qty">Qty</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Subtotal">Subtotal</div></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={items} for:item="it">
+                        <tr key={it.pricebookEntryId}>
+                            <td>{it.name}</td>
+                            <td>{it.displayPrice}</td>
+                            <td style="width: 120px;">
+                                <lightning-input type="number" value={it.quantity} min="1" data-pbe={it.pricebookEntryId} onchange={handleQtyChange}></lightning-input>
+                            </td>
+                            <td>{it.displaySubtotal}</td>
+                            <td>
+                                <lightning-button-icon icon-name="utility:delete" alternative-text="Remove" title="Remove" onclick={handleRemove} data-pbe={it.pricebookEntryId}></lightning-button-icon>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="slds-text-align_right slds-text-title_bold">Total</td>
+                        <td class="slds-text-title_bold">{totalDisplay}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="slds-m-top_large slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3">
+                    <lightning-input type="text" label="Quote Name (optional)" value={quoteName} onchange={handleQuoteName}></lightning-input>
+                    <lightning-textarea class="slds-m-top_small" label="Notes (optional)" value={notes} onchange={handleNotes}></lightning-textarea>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-text-align_right">
+                    <lightning-button variant="destructive" label="Clear Cart" onclick={handleClear}></lightning-button>
+                    <lightning-button class="slds-m-left_small" variant="brand" label="Place Order" onclick={handlePlaceOrder} disabled={placing}></lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <template if:false={items.length}>
+            <div class="slds-text-color_weak">Your cart is empty. Go to Products to add items.</div>
+        </template>
+    </section>
+</template>

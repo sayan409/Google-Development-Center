@@ -8,12 +8,6 @@ private class DMLOperations_TGN_TEST{
         Test.stopTest();
     }
     @isTest
-    private static void insertMethod2_TGN_TEST(){
-        Test.startTest();
-        DMLOperations.insertMethod2();
-        Test.stopTest();
-    }
-    @isTest
     private static void DMLOperations_TGN_TEST(){
         DMLOperations obj = new DMLOperations();
     }

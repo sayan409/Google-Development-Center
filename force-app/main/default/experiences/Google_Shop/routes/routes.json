@@ -1,0 +1,49 @@
+{
+  "routeType": "LWR",
+  "defaultRoute": "/",
+  "routes": [
+    {
+      "id": "home",
+      "label": "Home",
+      "route": "/",
+      "view": "home"
+    },
+    {
+      "id": "about",
+      "label": "About Google Shop",
+      "route": "/about",
+      "view": "about"
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "route": "/services",
+      "view": "services"
+    },
+    {
+      "id": "contact",
+      "label": "Contact Us",
+      "route": "/contact",
+      "view": "contact"
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "route": "/products",
+      "view": "products"
+    },
+    {
+      "id": "cart",
+      "label": "Cart",
+      "route": "/cart",
+      "view": "cart"
+    }
+  ],
+  "navigationMenu": [
+    { "label": "About Google Shop", "route": "/about" },
+    { "label": "Services", "route": "/services" },
+    { "label": "Contact Us", "route": "/contact" },
+    { "label": "Products", "route": "/products" },
+    { "label": "Cart", "route": "/cart" }
+  ]
+}
